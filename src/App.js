@@ -1,11 +1,15 @@
 import React from "react";
 import "./App.css";
-import QuoteCard from "./components/quote-card";
+import QuoteContainer from "./components/quote-container";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
     <div className="app">
-      <QuoteCard />
+      <Provider store={store}>
+        <QuoteContainer />
+      </Provider>
     </div>
   );
 }
